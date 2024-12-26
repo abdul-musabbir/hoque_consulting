@@ -1,0 +1,30 @@
+/* Header animation */
+#header {
+  /* position: fixed; */
+  animation: anime 0.5s ease-in;
+  transition: all 0.5s;
+}
+
+@keyframes anime {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/*  */
+.show {
+  /* transform: translate(0); */
+  opacity: 1;
+
+  mask-image: linear-gradient(to right);
+}
+
+.not-visible {
+  transform: translate(100px);
+  opacity: 0;
+}

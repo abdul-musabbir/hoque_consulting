@@ -1,0 +1,1901 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/output.css" />
+    <link rel="stylesheet" href="./css/default.css" />
+    <link rel="stylesheet" href="./css/slider.css" />
+    <link rel="stylesheet" href="./css/animation.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css"
+    />
+    <style>
+      .swiper {
+        width: 100%;
+        /* max-width: 1200px; */
+        height: 345px;
+        margin: 20px auto;
+      }
+
+      .swiper-slide {
+        font-size: 2rem;
+        color: #111204;
+        background-color: #fff;
+        border: 2px solid #b8fd506c;
+      }
+
+      .swiper-button-next,
+      .swiper-button-prev {
+        font-size: 10px !important;
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        display: flex !important;
+        background-color: #b9fd50;
+      }
+
+      :is(.swiper-button-next, .swiper-button-prev)::after {
+        font-size: 20px;
+        font-weight: 800;
+        color: #111204;
+      }
+
+      .swiper-pagination-bullet {
+        background: #3f6407;
+      }
+
+      .swiper-pagination-bullet-active {
+        background: #b9fd50;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main id="main">
+      <header
+        id="header"
+        class="h-20 flex items-center fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-opacity-30"
+      >
+        <div class="mx-auto flex w-4/5 xl:w-[1200px]">
+          <div class="flex w-full items-center justify-between">
+            <div class="leading-3">
+              <a href="#" class="select-none">
+                <h2 class="text-2xl font-bold xl:text-3xl">
+                  Hoque <span class="text-greenss">Consulting&reg;</span>
+                </h2>
+                <span class="text-white text-opacity-80">
+                  Solution provider</span
+                >
+              </a>
+            </div>
+
+            <div class="lg:hidden">
+              <button id="menu-button" class="text-xl">
+                <i class="fa-solid fa-bars text-2xl"></i>
+              </button>
+            </div>
+
+            <div
+              id="menu-container"
+              class="absolute top-20 left-0 hidden w-full animates lg:static lg:block lg:w-auto"
+              style="z-index: 9999999"
+            >
+              <div class="w-full flex items-center justify-center">
+                <div
+                  class="bg-blacks md:w-[400px] md:h-[450px] lg:h-auto p-5 px-16 lg:bg-transparent rounded-xl shadows lg:shadow-none lg:rounded-none lg:bg-none lg:p-0 flex items-center justify-center lg:w-auto lg:items-stretch lg:justify-normal"
+                >
+                  <ul
+                    class="flex flex-col gap-4 text-white text-center lg:flex-row lg:items-center xl:gap-6"
+                  >
+                    <li><a class="font-normal text-base" href="#">Home</a></li>
+                    <li>
+                      <a class="font-normal text-base" href="#">Services</a>
+                    </li>
+                    <li>
+                      <a class="font-normal text-base" href="#">Portfolio</a>
+                    </li>
+                    <li>
+                      <a class="font-normal text-base" href="#">Pricing</a>
+                    </li>
+                    <li>
+                      <a class="font-normal text-base" href="#">About Us</a>
+                    </li>
+                    <li>
+                      <a class="font-normal text-base" href="#">Contact Us</a>
+                    </li>
+                    <li>
+                      <button
+                        class="bg-greens text-blacks font-medium px-6 py-2 rounded-xl cursor-pointer"
+                      >
+                        Get Quote
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="min-h-screen flex items-center justify-center relative">
+        <div class="w-full h-full flex items-center justify-center">
+          <div class="absolute top-60 right-96 animate-spins">
+            <img class="w-28 opacity-25" src="./assets/logos/star.svg" alt="" />
+          </div>
+
+          <div
+            class="flex mx-auto w-11/12 md:w-[720px] lg:w-[1000px] xl:w-[1200px]"
+          >
+            <div class="w-full h-full flex items-center justify-center">
+              <div class="lg:mt-28">
+                <div class="flex flex-col gap-16 lg:gap-20">
+                  <div class="flex flex-col items-center gap-8 lg:gap-12">
+                    <div
+                      class="text-center relative flex flex-col items-center justify-center"
+                    >
+                      <h3
+                        class="font-bold text-4xl sm:text-5xl md:text-7xl lg:text-[6rem] leading-relaxed"
+                      >
+                        Simplify Technology,
+                      </h3>
+                      <h3
+                        class="font-bold text-4xl sm:text-5xl md:text-7xl lg:text-[6rem]"
+                      >
+                        Accelerate
+                        <span class="text-greenss italic">Growth</span>
+                      </h3>
+
+                      <div
+                        class="absolute size-28 lg:size-60 lg:blur-[8rem] bg-greens blur-3xl -z-10"
+                      ></div>
+                    </div>
+
+                    <div>
+                      <p
+                        class="text-white text-opacity-80 text-center font-normal xl:px-56 lg:px-44 xl:text-lg"
+                      >
+                        Hoque Consulting LLC is a Minnesota based premiere
+                        consulting firm that provides cost effective solutions
+                        through our hybrid solution. We can get involved in any
+                        phase of the project and provide you with very
+                        economical top quality service. Please Contact Us for a
+                        specific quote or with any questions.
+                      </p>
+                    </div>
+
+                    <div class="flex gap-4 relative">
+                      <div class="absolute">
+                        <img
+                          class="w-60 opacity-80"
+                          src="./assets/logos/microsoft-partner-logo.svg"
+                          alt=""
+                        />
+                      </div>
+                      <button
+                        class="bg-greens text-blacks px-4 py-3 rounded-xl font-medium"
+                      >
+                        Book A Meeting
+                      </button>
+
+                      <button
+                        class="bg-blacks border border-[#B9FD50] text-white px-4 py-3 rounded-xl font-medium"
+                      >
+                        Get a Quote
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="flex flex-col gap-6 xl:gap-8">
+                    <div
+                      class="xl:w-full xl:flex xl:items-center xl:justify-center"
+                    >
+                      <div class="xl:flex items-center justify-center flex">
+                        <h3
+                          class="text-center styles text-sm sm:text-base md:text-base lg:text-lg xl:text-xl"
+                        >
+                          TRUSTED BY AMAZING BRANDS
+                        </h3>
+                      </div>
+                    </div>
+
+                    <div>
+                      <div>
+                        <div
+                          class="bg-[#222] bg-opacity-100 w-full h-20 rounded-xl flex items-center px-4 justify-between md:h-28 xl:px-10"
+                        >
+                          <div>
+                            <img
+                              class="w-24 xl:w-32"
+                              src="./assets/logos/l.svg"
+                              alt=""
+                            />
+                          </div>
+
+                          <div>
+                            <img
+                              class="w-24 xl:w-32"
+                              src="./assets/logos/l.svg"
+                              alt=""
+                            />
+                          </div>
+
+                          <div>
+                            <img
+                              class="w-24 xl:w-32"
+                              src="./assets/logos/l.svg"
+                              alt=""
+                            />
+                          </div>
+
+                          <div>
+                            <img
+                              class="w-24 xl:w-32"
+                              src="./assets/logos/l.svg"
+                              alt=""
+                            />
+                          </div>
+                          <div>
+                            <img
+                              class="w-24 xl:w-32"
+                              src="./assets/logos/l.svg"
+                              alt=""
+                            />
+                          </div>
+                          <div>
+                            <img
+                              class="w-24 xl:w-32"
+                              src="./assets/logos/l.svg"
+                              alt=""
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pb-24 lg:pt-24">
+        <div>
+          <div
+            class="flex mx-auto w-11/12 flex-col gap-20 md:w-[720px] lg:w-[1000px] xl:w-[1200px]"
+          >
+            <div class="w-full space-y-8">
+              <div class="w-full">
+                <div class="w-full flex">
+                  <div class="text-center mx-auto inline-block">
+                    <h3 class="uppercase text-greenss xl:text-xl">
+                      Our capabilities
+                    </h3>
+                    <h2 class="font-semibold text-white text-2xl xl:text-4xl">
+                      We can help you with..
+                    </h2>
+                  </div>
+                </div>
+              </div>
+
+              <div class="">
+                <div>
+                  <div>
+                    <div
+                      id="capabilities-container"
+                      class="flex flex-wrap gap-4 items-center justify-center"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="w-full flex items-center justify-center">
+                <div>
+                  <h4 class="text-white text-opacity-80 font-light text-center">
+                    Load More
+                  </h4>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div>
+                <div>
+                  <div class="space-y-20">
+                    <div>
+                      <div>
+                        <div>
+                          <h3 class="text-greenss text-md uppercase xl:text-lg">
+                            benefits
+                          </h3>
+                        </div>
+                        <div>
+                          <div
+                            class="flex flex-col gap-4 lg:grid lg:grid-cols-2 lg:gap-10"
+                          >
+                            <div class="xl:pr-20">
+                              <h2 class="text-4xl font-semibold">
+                                Empowering Your Brand with Comprehensive Digital
+                                Solutions
+                              </h2>
+                            </div>
+
+                            <div class="">
+                              <div class="space-y-4">
+                                <p
+                                  class="text-white text-opacity-80 font-light xl:text-xl"
+                                >
+                                  At Hoque Consulting, we provide end-to-end
+                                  digital solutions to help businesses thrive in
+                                  an ever-changing online landscape. Our
+                                  expertise spans across web development, app
+                                  creation, graphic design, video editing,
+                                  digital marketing, and SEO—ensuring every
+                                  aspect of your digital presence is optimized
+                                  for success. With a focus on strategy,
+                                  creativity, and measurable results, we empower
+                                  your brand to stand out and grow.
+                                </p>
+                                <button
+                                  class="bg-greens text-blacks font-medium px-6 py-2 rounded-xl cursor-pointer"
+                                >
+                                  See Pricing
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div>
+                      <div>
+                        <div>
+                          <div>
+                            <div
+                              class="grid gap-10 px-5 md:grid-cols-2 md:grid-rows-3 md:gap-0 lg:grid-rows-2 lg:grid-cols-3 lg:gap-0 lg:p-0"
+                              id="benefits-container"
+                            ></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="py-24 bg-white">
+        <div>
+          <div
+            class="flex mx-auto w-11/12 md:w-[720px] lg:w-[1000px] xl:w-[1200px]"
+          >
+            <div class="w-full">
+              <div class="w-full">
+                <div
+                  class="flex flex-col gap-16 md:grid md:grid-cols-2 md:gap-5 lg:gap-24"
+                >
+                  <div>
+                    <div>
+                      <img
+                        class="rounded-xl"
+                        src="https://hoqueconsulting-com.preview-domain.com/assets/images/service/01.jpg"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+
+                  <div
+                    class="lg:py-10 md:flex md:items-center md:justify-center"
+                  >
+                    <div class="space-y-5 lg:space-y-10">
+                      <div>
+                        <h2 class="text-3xl lg:text-4xl text-blacks font-bold">
+                          Who We Are
+                        </h2>
+                      </div>
+
+                      <div class="text-blacks space-y-5">
+                        <p class="text-base lg:text-lg">
+                          At <strong>Hoque Consulting,</strong> we bring over 20
+                          years of expertise in creating innovative solutions
+                          that help businesses succeed. Our team specializes in
+                          strategies that deliver measurable results, from web
+                          development to SEO, app development, and marketing.
+                        </p>
+
+                        <p class="text-base lg:text-lg">
+                          Our mission is to transform your ideas into impactful,
+                          scalable solutions. We combine creativity, technology,
+                          and strategy to help your brand thrive in a
+                          competitive digital world.
+                        </p>
+
+                        <p class="py-4">
+                          <a
+                            href="#"
+                            class="bg-greens text-blacks px-6 py-3 rounded-xl lg:text-lg"
+                            >Get more traffic</a
+                          >
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="py-24">
+        <div>
+          <div
+            class="flex mx-auto w-11/12 md:w-[720px] lg:w-[1000px] xl:w-[1200px]"
+          >
+            <div class="w-full">
+              <div class="w-full">
+                <div
+                  class="flex flex-col gap-16 md:grid md:grid-cols-2 md:gap-5 lg:gap-24"
+                >
+                  <div
+                    class="order-1 md:order-2 flex items-center justify-center"
+                  >
+                    <div>
+                      <img
+                        class="rounded-xl"
+                        src="https://hoqueconsulting-com.preview-domain.com/assets/images/service/02.jpg"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+
+                  <div class="order-2 md:order-1">
+                    <div class="space-y-5">
+                      <div>
+                        <h2 class="text-3xl lg:text-4xl text-white font-bold">
+                          Why Choose Us?
+                        </h2>
+                      </div>
+
+                      <div class="text-white space-y-5">
+                        <p class="text-xl font-semibold">
+                          Your Growth is Our Priority
+                        </p>
+
+                        <p class="text-base">
+                          Choosing <strong>Hoque Consulting</strong> means
+                          partnering with a team that’s dedicated to your
+                          success.
+                        </p>
+
+                        <div class="space-y-3 py-4">
+                          <p class="text-base">
+                            <strong>Innovative Solutions:</strong> means
+                            partnering with a team that’s dedicated to your
+                            success.
+                          </p>
+                          <p class="text-base">
+                            <strong>Client-Centric Approach:</strong> Your goals
+                            are our priority, and we tailor solutions to meet
+                            them.
+                          </p>
+
+                          <p class="text-base">
+                            <strong>Proven Expertise:</strong>A track record of
+                            driving results for businesses across diverse
+                            industries.
+                          </p>
+
+                          <p class="text-base">
+                            <strong>Transparent Collaboration: </strong> means
+                            partnering with a team that’s dedicated to your
+                            success.
+                          </p>
+
+                          <p class="text-base">
+                            Don’t just take our word for it—experience the
+                            difference for yourself.
+                          </p>
+                          <p class="pt-4">
+                            <a
+                              href="#"
+                              class="bg-greens text-blacks px-6 py-3 rounded-xl lg:text-lg"
+                              >Get more traffic</a
+                            >
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="py-24 bg-white">
+        <div>
+          <div
+            class="flex mx-auto w-11/12 md:w-[720px] lg:w-[1000px] xl:w-[1200px]"
+          >
+            <div class="w-full">
+              <div class="w-full">
+                <div class="flex flex-col gap-16">
+                  <div>
+                    <div class="flex flex-col items-center text-center gap-4">
+                      <h2 class="text-blacks font-bold text-2xl xl:text-4xl">
+                        Our Beautiful Works
+                      </h2>
+                      <p
+                        class="text-blacks text-opacity-80 font-normal md:w-[400px]"
+                      >
+                        We help our clients grow their bottom-line with clear
+                        and professional websites.
+                      </p>
+
+                      <button
+                        class="bg-white text-blacks border-2 border-blacks px-4 py-3 rounded-xl xl:px-8"
+                      >
+                        Load More
+                      </button>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div>
+                      <div>
+                        <div>
+                          <div class="space-y-3 coulmnss w-full">
+                            <img
+                              class="w-full xl:w-[400px] rounded-2xl"
+                              src="https://cdn.leonardo.ai/users/6d3f20b1-96c0-4441-a27e-8698f3895b8e/generations/e8c070ce-7228-41ab-8b74-c0535db83a14/variations/universal_upscale_0_e8c070ce-7228-41ab-8b74-c0535db83a14_0.jpg?w=512"
+                              alt=""
+                            />
+
+                            <img
+                              class="w-full xl:w-[400px] rounded-2xl"
+                              src="https://cdn.leonardo.ai/users/82ab6db9-a6ab-4a03-8b8d-41164550cdb2/generations/541d42dc-e101-40cd-86fd-404964cdcedd/Leonardo_Phoenix_a_cinematic_photograph_of_a_powerful_Ceratosa_3.jpg?w=512"
+                              alt=""
+                            />
+                            <img
+                              class="w-full xl:w-[400px] rounded-2xl"
+                              src="https://cdn.leonardo.ai/users/9824dfca-0a4c-47da-b0d3-f361e596127b/generations/bc99ec8f-e6f0-4883-aa17-358b434bacf0/variations/Default_A_standalone_orientalstyle_artwork_of_a_variety_of_sty_2_bc99ec8f-e6f0-4883-aa17-358b434bacf0_0.jpg?w=512"
+                              alt=""
+                            />
+                            <img
+                              class="w-full xl:w-[400px] rounded-2xl"
+                              src="https://cdn.leonardo.ai/users/43c70dc3-7ef1-4cd0-801f-bad7cc4a09b9/generations/dc0576bb-5f3b-4569-870a-c1eae5452bdc/Leonardo_Phoenix_a_highly_detailed_surreal_and_vibrant_cinemat_0.jpg?w=512"
+                              alt=""
+                            />
+                            <img
+                              class="w-full xl:w-[400px] rounded-2xl"
+                              src="https://cdn.leonardo.ai/users/79c5f029-01fe-4873-8589-ba7e049546f2/generations/f55e4923-6726-4cab-ac7a-95d9db606c62/variations/Default_watercolor_art_a_night_sky_with_a_deer_trees_and_stars_2_f55e4923-6726-4cab-ac7a-95d9db606c62_0.jpg?w=512"
+                              alt=""
+                            />
+                            <img
+                              class="w-full xl:w-[400px] rounded-2xl"
+                              src="https://cdn.leonardo.ai/users/f4c24841-717e-43ce-85ad-d06db7d4b5d7/generations/ecbba9d5-ff98-42b2-8069-883e67599b9c/Leonardo_Anime_XL_A_hyperrealistic_ultradetailed_8K_firstperso_0.jpg?w=512"
+                              alt=""
+                            />
+                            <img
+                              class="w-full xl:w-[400px] rounded-2xl"
+                              src="https://cdn.leonardo.ai/users/48c84129-0b07-4694-a7f8-426a6b25203b/generations/0b2f6a5a-4a4d-429d-ab9a-a55a498216a2/Leonardo_Anime_XL_Image_is_a_vibrant_detailed_animestyle_illus_0.jpg?w=512"
+                              alt=""
+                            />
+                            <img
+                              class="w-full xl:w-[400px] rounded-2xl"
+                              src="https://cdn.leonardo.ai/users/b2776aad-2ff0-4545-8d10-c904641c58ff/generations/23ad9cad-efae-4c69-83d5-3d1c43f7e4e4/AlbedoBase_XL_A_vintagestyle_illustration_of_a_cats_head_in_fu_2.jpg?w=512"
+                              alt=""
+                            />
+                            <img
+                              class="w-full xl:w-[400px] rounded-2xl"
+                              src="https://cdn.leonardo.ai/users/4bc3fda1-14f7-4387-89a4-d8f0dd27a9ff/generations/ccbf9c65-4766-42e6-9ea2-3488853910c1/variations/Default_A_terrifying_leopardjellyfish_hybrid_floating_through_3_ccbf9c65-4766-42e6-9ea2-3488853910c1_0.jpg?w=512"
+                              alt=""
+                            />
+                            <img
+                              class="w-full xl:w-[400px] rounded-2xl"
+                              src="https://cdn.leonardo.ai/users/8e2e3bc6-c08e-4cce-acce-47cb5383e917/generations/6a37bac6-71e9-4108-ba10-c2be802b7cf1/Leonardo_Anime_XL_house_in_the_rain_3.jpg?w=512"
+                              alt=""
+                            />
+                            <img
+                              class="w-full xl:w-[400px] rounded-2xl"
+                              src="https://cdn.leonardo.ai/users/c78b0838-1bb7-4221-ad17-3938fe29a7be/generations/95440810-c1a1-49bc-b71f-496072f1e20e/Leonardo_Lightning_XL_watercolor_art_A_large_vibrant_bouquet_o_0.jpg"
+                              alt=""
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- fasdfasdf -->
+      <div class="py-24">
+        <div>
+          <div
+            class="flex mx-auto w-11/12 md:w-[720px] lg:w-[1000px] xl:w-[1200px]"
+          >
+            <div>
+              <div class="space-y-10 xl:space-y-20">
+                <div>
+                  <div>
+                    <div>
+                      <h3 class="text-greenss text-md uppercase">
+                        how we work
+                      </h3>
+                    </div>
+                    <div>
+                      <div
+                        class="flex flex-col gap-4 xl:grid grid-cols-2 xl:gap-10"
+                      >
+                        <div class="pr-20">
+                          <h2 class="text-4xl font-semibold">
+                            Get a dedicated design team at fraction of the cost.
+                          </h2>
+                        </div>
+
+                        <div class="">
+                          <div class="space-y-4">
+                            <p
+                              class="text-white text-opacity-80 font-light xl:text-xl"
+                            >
+                              At Hoque Consulting, we focus on quality and
+                              precision at every step. From initial consultation
+                              to final delivery, we ensure that every project is
+                              handled with the utmost care and professionalism.
+                              Our goal is to build long-term partnerships by
+                              delivering results that exceed expectations.
+                            </p>
+                            <button
+                              class="bg-greens text-blacks font-medium px-6 py-2 rounded-xl cursor-pointer"
+                            >
+                              See Pricing
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <div
+                    class="flex flex-col gap-10 md:grid md:grid-cols-2 xl:grid xl:grid-cols-3 xl:gap-20"
+                  >
+                    <div class="flex flex-col">
+                      <div class="flex items-center">
+                        <div
+                          class="bg-greens flex items-center justify-center size-20 rounded-full"
+                        >
+                          <h4 class="text-3xl text-blacks font-semibold">1</h4>
+                        </div>
+
+                        <div class="-z-0 -translate-x-2.5">
+                          <img
+                            class="w-64 h-10"
+                            src="./assets/logos/arrow.svg"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+
+                      <div class="space-y-4 mt-10">
+                        <h3 class="font-medium text-2xl">
+                          Discovery & Consultation
+                        </h3>
+                        <p class="text-white text-opacity-80 xl:text-lg">
+                          Every successful project starts with understanding. We
+                          take the time to meet with you, learn about your
+                          goals, challenges, and vision to create a tailored
+                          strategy that aligns with your business objectives.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="flex flex-col">
+                      <div class="flex items-center">
+                        <div
+                          class="bg-greens flex items-center justify-center size-20 rounded-full"
+                        >
+                          <h4 class="text-3xl text-blacks font-semibold">2</h4>
+                        </div>
+
+                        <div class="-z-0 -translate-x-2.5">
+                          <img
+                            class="w-64 h-10"
+                            src="./assets/logos/arrow.svg"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+
+                      <div class="space-y-4 mt-10">
+                        <h3 class="font-medium text-2xl">Strategic Planning</h3>
+                        <p class="text-white text-opacity-80 xl:text-lg">
+                          Once we’ve understood your needs, our team develops a
+                          roadmap for success. We craft a customized plan that
+                          prioritizes your goals, incorporates your feedback,
+                          and sets a clear direction for the entire project,
+                          ensuring smooth progress
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="flex flex-col">
+                      <div class="flex items-center">
+                        <div
+                          class="bg-greens flex items-center justify-center size-20 rounded-full"
+                        >
+                          <h4 class="text-3xl text-blacks font-semibold">3</h4>
+                        </div>
+
+                        <div class="-z-0 -translate-x-2.5">
+                          <img
+                            class="w-64 h-10"
+                            src="./assets/logos/arrow.svg"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+
+                      <div class="space-y-4 mt-10">
+                        <h3 class="font-medium text-2xl">
+                          Design & Development
+                        </h3>
+                        <p class="text-white text-opacity-80 text-lg">
+                          Our design and development teams collaborate to bring
+                          your vision to life. We build user-friendly,
+                          responsive, and optimized solutions, ensuring
+                          everything functions seamlessly and meets your
+                          expectations.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="py-24 bg-white">
+        <div>
+          <div
+            class="flex mx-auto w-11/12 md:w-[720px] lg:w-[1000px] xl:w-[1200px]"
+          >
+            <div class="w-full flex flex-col">
+              <div>
+                <div>
+                  <div
+                    class="text-center space-y-4 flex w-full flex-col items-center"
+                  >
+                    <h3 class="text-blacks uppercase lg:text-lg">
+                      testimonial
+                    </h3>
+                    <h2
+                      class="text-blacks text-2xl lg:text-5xl lg:w-[400px] font-extrabold"
+                    >
+                      Customer is Our Top Priority
+                    </h2>
+                    <p class="text-blacks">
+                      We survey all of our clients, the results of which go
+                      directly to our CEO.
+                    </p>
+
+                    <h2>
+                      Ideapeel is the best digital agency i have ever seen!
+                      Highly Recommended!
+                    </h2>
+                  </div>
+                </div>
+              </div>
+
+              <div class="w-full">
+                <div class="w-full">
+                  <div class="swiper">
+                    <!-- Swiper Wrapper -->
+                    <div class="swiper-wrapper">
+                      <div
+                        class="swiper-slide rounded-xl overflow-hidden relative"
+                      >
+                        <div class="p-8 flex w-full h-full">
+                          <div class="absolute -top-4 right-28">
+                            <img
+                              src="https://hoqueconsulting-com.preview-domain.com/assets/images/testimonials/logo/quote.png"
+                              alt=""
+                            />
+                          </div>
+                          <div
+                            class="flex flex-col justify-between h-full w-full"
+                          >
+                            <div>
+                              <div>
+                                <img
+                                  src="https://hoqueconsulting-com.preview-domain.com/assets/images/testimonials/logo/01.svg"
+                                  alt=""
+                                />
+                              </div>
+                            </div>
+
+                            <div>
+                              <div>
+                                <p class="text-base text-[#4F4F55] pr-10">
+                                  “I don’t see anyone else in this space
+                                  providing the level of insight brings to the
+                                  table. They understand data beyond the vanity
+                                  metrics often provided – true impactful
+                                  results.”
+                                </p>
+                              </div>
+                            </div>
+
+                            <div class="pt-5 border-t-2">
+                              <div>
+                                <div class="flex items-start gap-5">
+                                  <div>
+                                    <img
+                                      src="https://hoqueconsulting-com.preview-domain.com/assets/images/testimonials/avatars/01.png"
+                                      alt=""
+                                    />
+                                  </div>
+
+                                  <div>
+                                    <h3
+                                      class="text-xl text-[#26262c] font-semibold"
+                                    >
+                                      Keaton Stancato
+                                    </h3>
+                                    <p class="text-base text-[#4f4f55]">
+                                      Founder/CEO at Fluxi Digital
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="swiper-slide rounded-xl overflow-hidden relative"
+                      >
+                        <div class="p-8 flex w-full h-full">
+                          <div class="absolute -top-4 right-28">
+                            <img
+                              src="https://hoqueconsulting-com.preview-domain.com/assets/images/testimonials/logo/quote.png"
+                              alt=""
+                            />
+                          </div>
+                          <div
+                            class="flex flex-col justify-between h-full w-full"
+                          >
+                            <div>
+                              <div>
+                                <img
+                                  src="https://hoqueconsulting-com.preview-domain.com/assets/images/testimonials/logo/01.svg"
+                                  alt=""
+                                />
+                              </div>
+                            </div>
+
+                            <div>
+                              <div>
+                                <p class="text-base text-[#4F4F55] pr-10">
+                                  “I don’t see anyone else in this space
+                                  providing the level of insight brings to the
+                                  table. They understand data beyond the vanity
+                                  metrics often provided – true impactful
+                                  results.”
+                                </p>
+                              </div>
+                            </div>
+
+                            <div class="pt-5 border-t-2">
+                              <div>
+                                <div class="flex items-start gap-5">
+                                  <div>
+                                    <img
+                                      src="https://hoqueconsulting-com.preview-domain.com/assets/images/testimonials/avatars/01.png"
+                                      alt=""
+                                    />
+                                  </div>
+
+                                  <div>
+                                    <h3
+                                      class="text-xl text-[#26262c] font-semibold"
+                                    >
+                                      Keaton Stancato
+                                    </h3>
+                                    <p class="text-base text-[#4f4f55]">
+                                      Founder/CEO at Fluxi Digital
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="swiper-slide rounded-xl overflow-hidden relative"
+                      >
+                        <div class="p-8 flex w-full h-full">
+                          <div class="absolute -top-4 right-28">
+                            <img
+                              src="https://hoqueconsulting-com.preview-domain.com/assets/images/testimonials/logo/quote.png"
+                              alt=""
+                            />
+                          </div>
+                          <div
+                            class="flex flex-col justify-between h-full w-full"
+                          >
+                            <div>
+                              <div>
+                                <img
+                                  src="https://hoqueconsulting-com.preview-domain.com/assets/images/testimonials/logo/01.svg"
+                                  alt=""
+                                />
+                              </div>
+                            </div>
+
+                            <div>
+                              <div>
+                                <p class="text-base text-[#4F4F55] pr-10">
+                                  “I don’t see anyone else in this space
+                                  providing the level of insight brings to the
+                                  table. They understand data beyond the vanity
+                                  metrics often provided – true impactful
+                                  results.”
+                                </p>
+                              </div>
+                            </div>
+
+                            <div class="pt-5 border-t-2">
+                              <div>
+                                <div class="flex items-start gap-5">
+                                  <div>
+                                    <img
+                                      src="https://hoqueconsulting-com.preview-domain.com/assets/images/testimonials/avatars/01.png"
+                                      alt=""
+                                    />
+                                  </div>
+
+                                  <div>
+                                    <h3
+                                      class="text-xl text-[#26262c] font-semibold"
+                                    >
+                                      Keaton Stancato
+                                    </h3>
+                                    <p class="text-base text-[#4f4f55]">
+                                      Founder/CEO at Fluxi Digital
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="swiper-slide rounded-xl overflow-hidden relative"
+                      >
+                        <div class="p-8 flex w-full h-full">
+                          <div class="absolute -top-4 right-28">
+                            <img
+                              src="https://hoqueconsulting-com.preview-domain.com/assets/images/testimonials/logo/quote.png"
+                              alt=""
+                            />
+                          </div>
+                          <div
+                            class="flex flex-col justify-between h-full w-full"
+                          >
+                            <div>
+                              <div>
+                                <img
+                                  src="https://hoqueconsulting-com.preview-domain.com/assets/images/testimonials/logo/01.svg"
+                                  alt=""
+                                />
+                              </div>
+                            </div>
+
+                            <div>
+                              <div>
+                                <p class="text-base text-[#4F4F55] pr-10">
+                                  “I don’t see anyone else in this space
+                                  providing the level of insight brings to the
+                                  table. They understand data beyond the vanity
+                                  metrics often provided – true impactful
+                                  results.”
+                                </p>
+                              </div>
+                            </div>
+
+                            <div class="pt-5 border-t-2">
+                              <div>
+                                <div class="flex items-start gap-5">
+                                  <div>
+                                    <img
+                                      src="https://hoqueconsulting-com.preview-domain.com/assets/images/testimonials/avatars/01.png"
+                                      alt=""
+                                    />
+                                  </div>
+
+                                  <div>
+                                    <h3
+                                      class="text-xl text-[#26262c] font-semibold"
+                                    >
+                                      Keaton Stancato
+                                    </h3>
+                                    <p class="text-base text-[#4f4f55]">
+                                      Founder/CEO at Fluxi Digital
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="swiper-slide rounded-xl overflow-hidden relative"
+                      >
+                        <div class="p-8 flex w-full h-full">
+                          <div class="absolute -top-4 right-28">
+                            <img
+                              src="https://hoqueconsulting-com.preview-domain.com/assets/images/testimonials/logo/quote.png"
+                              alt=""
+                            />
+                          </div>
+                          <div
+                            class="flex flex-col justify-between h-full w-full"
+                          >
+                            <div>
+                              <div>
+                                <img
+                                  src="https://hoqueconsulting-com.preview-domain.com/assets/images/testimonials/logo/01.svg"
+                                  alt=""
+                                />
+                              </div>
+                            </div>
+
+                            <div>
+                              <div>
+                                <p class="text-base text-[#4F4F55] pr-10">
+                                  “I don’t see anyone else in this space
+                                  providing the level of insight brings to the
+                                  table. They understand data beyond the vanity
+                                  metrics often provided – true impactful
+                                  results.”
+                                </p>
+                              </div>
+                            </div>
+
+                            <div class="pt-5 border-t-2">
+                              <div>
+                                <div class="flex items-start gap-5">
+                                  <div>
+                                    <img
+                                      src="https://hoqueconsulting-com.preview-domain.com/assets/images/testimonials/avatars/01.png"
+                                      alt=""
+                                    />
+                                  </div>
+
+                                  <div>
+                                    <h3
+                                      class="text-xl text-[#26262c] font-semibold"
+                                    >
+                                      Keaton Stancato
+                                    </h3>
+                                    <p class="text-base text-[#4f4f55]">
+                                      Founder/CEO at Fluxi Digital
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="swiper-slide rounded-xl overflow-hidden relative"
+                      >
+                        <div class="p-8 flex w-full h-full">
+                          <div class="absolute -top-4 right-28">
+                            <img
+                              src="https://hoqueconsulting-com.preview-domain.com/assets/images/testimonials/logo/quote.png"
+                              alt=""
+                            />
+                          </div>
+                          <div
+                            class="flex flex-col justify-between h-full w-full"
+                          >
+                            <div>
+                              <div>
+                                <img
+                                  src="https://hoqueconsulting-com.preview-domain.com/assets/images/testimonials/logo/01.svg"
+                                  alt=""
+                                />
+                              </div>
+                            </div>
+
+                            <div>
+                              <div>
+                                <p class="text-base text-[#4F4F55] pr-10">
+                                  “I don’t see anyone else in this space
+                                  providing the level of insight brings to the
+                                  table. They understand data beyond the vanity
+                                  metrics often provided – true impactful
+                                  results.”
+                                </p>
+                              </div>
+                            </div>
+
+                            <div class="pt-5 border-t-2">
+                              <div>
+                                <div class="flex items-start gap-5">
+                                  <div>
+                                    <img
+                                      src="https://hoqueconsulting-com.preview-domain.com/assets/images/testimonials/avatars/01.png"
+                                      alt=""
+                                    />
+                                  </div>
+
+                                  <div>
+                                    <h3
+                                      class="text-xl text-[#26262c] font-semibold"
+                                    >
+                                      Keaton Stancato
+                                    </h3>
+                                    <p class="text-base text-[#4f4f55]">
+                                      Founder/CEO at Fluxi Digital
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- Navigation Buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="py-24 xl:py-40">
+        <div>
+          <div
+            class="flex mx-auto w-11/12 flex-col gap-20 md:w-[720px] lg:w-[1000px] xl:w-[1200px]"
+          >
+            <div class="w-full flex flex-col gap-16">
+              <div class="w-full">
+                <div class="w-full flex">
+                  <div
+                    class="text-center mx-auto inline-block space-y-3 xl:justify-center xl:items-center xl:flex xl:flex-col"
+                  >
+                    <h3 class="uppercase text-greenss xl:text-lg">
+                      Clear & Simple Pricing
+                    </h3>
+                    <h2
+                      class="font-semibold text-white text-2xl xl:text-4xl xl:w-[400px]"
+                    >
+                      Simple pricing to level up your brand.
+                    </h2>
+                    <p
+                      class="text-white text-opacity-80 xl:w-[420px] xl:text-lg"
+                    >
+                      Senior experts. On-demand requests. Fast turnarounds. Flat
+                      monthly fee. Cancel anytime.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="">
+                <div>
+                  <div>
+                    <div
+                      class="sm:grid md:grid-cols-2 xl:grid-cols-3 xl:gap-5 flex flex-col gap-5"
+                    >
+                      <div>
+                        <div
+                          class="bg-[#222222] rounded-2xl border border-[#b8fd5047] hover:shadow-greens hover:shadow-2xl"
+                        >
+                          <div class="p-8">
+                            <div>
+                              <div
+                                class="space-y-5 border-b border-[#5654548e] pb-6"
+                              >
+                                <div class="flex items-center gap-3">
+                                  <div>
+                                    <h2
+                                      class="font-semibold text-2xl xl:text-3xl"
+                                    >
+                                      Standard
+                                    </h2>
+                                  </div>
+                                  <div>
+                                    <span
+                                      class="bg-greens text-blacks px-6 py-2 rounded-xl"
+                                      >Most Popular</span
+                                    >
+                                  </div>
+                                </div>
+
+                                <div>
+                                  <p
+                                    class="text-white text-opacity-80 text-xs xl:text-base"
+                                  >
+                                    One request at a time. For companies who
+                                    need on-going design support.
+                                  </p>
+                                </div>
+                              </div>
+
+                              <div class="py-6 border-b border-[#5654548e]">
+                                <div>
+                                  <div>
+                                    <h2 class="text-4xl font-bold text-greenss">
+                                      $2,995/m
+                                    </h2>
+                                    <p
+                                      class="text-white text-opacity-80 text-xsxl:text-base"
+                                    >
+                                      Pause or cancel anytime
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="pt-6">
+                                <div class="flex flex-col gap-8">
+                                  <div class="">
+                                    <div>
+                                      <ul class="flex flex-col gap-4 xl:gap-3">
+                                        <li
+                                          class="flex gap-4 text-lg items-center"
+                                        >
+                                          <span
+                                            ><img
+                                              class="w-4"
+                                              src="./assets/logos/star.svg"
+                                              alt="" /></span
+                                          >1x active task t a time
+                                        </li>
+                                        <li
+                                          class="flex gap-4 text-lg items-center"
+                                        >
+                                          <span
+                                            ><img
+                                              class="w-4"
+                                              src="./assets/logos/star.svg"
+                                              alt="" /></span
+                                          >Unlimited revisions
+                                        </li>
+                                        <li
+                                          class="flex gap-4 text-lg items-center"
+                                        >
+                                          <span
+                                            ><img
+                                              class="w-4"
+                                              src="./assets/logos/star.svg"
+                                              alt="" /></span
+                                          >Dedicated project manager
+                                        </li>
+                                        <li
+                                          class="flex gap-4 text-lg items-center"
+                                        >
+                                          <span
+                                            ><img
+                                              class="w-4"
+                                              src="./assets/logos/star.svg"
+                                              alt="" /></span
+                                          >Daily comms through Slack
+                                        </li>
+                                        <li
+                                          class="flex gap-4 text-lg items-center"
+                                        >
+                                          <span
+                                            ><img
+                                              class="w-4"
+                                              src="./assets/logos/star.svg"
+                                              alt="" /></span
+                                          >Work with senior
+                                        </li>
+                                        <li
+                                          class="flex gap-4 text-lg items-center"
+                                        >
+                                          <span
+                                            ><img
+                                              class="w-4"
+                                              src="./assets/logos/star.svg"
+                                              alt="" /></span
+                                          >2-3 days turn around time
+                                        </li>
+                                        <li
+                                          class="flex gap-4 text-lg items-center"
+                                        >
+                                          <span
+                                            ><img
+                                              class="w-4"
+                                              src="./assets/logos/star.svg"
+                                              alt="" /></span
+                                          >Top tier design
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+
+                                  <div>
+                                    <div class="flex flex-col gap-4">
+                                      <button
+                                        class="border border-[#b8fd50d7] py-3 rounded-xl"
+                                      >
+                                        Book A Call
+                                      </button>
+                                      <button
+                                        class="bg-greens py-3 rounded-xl text-blacks font-medium"
+                                      >
+                                        Click to buy
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div>
+                        <div
+                          class="bg-[#222222] rounded-2xl border-2 border-[#b8fd50df]"
+                        >
+                          <div class="p-8">
+                            <div>
+                              <div
+                                class="space-y-5 border-b border-[#5654548e] pb-6"
+                              >
+                                <div class="flex items-center gap-3">
+                                  <div>
+                                    <h2
+                                      class="font-semibold text-2xl xl:text-3xl"
+                                    >
+                                      Growth
+                                    </h2>
+                                  </div>
+                                  <div>
+                                    <span
+                                      class="bg-white text-blacks px-6 py-2 rounded-xl"
+                                      >Best value</span
+                                    >
+                                  </div>
+                                </div>
+
+                                <div>
+                                  <p
+                                    class="text-white text-opacity-80 text-xs xl:text-base"
+                                  >
+                                    Double the requests. For companies with
+                                    increasing design needs. Limited spots.
+                                  </p>
+                                </div>
+                              </div>
+
+                              <div class="py-6 border-b border-[#5654548e]">
+                                <div>
+                                  <div>
+                                    <h2 class="text-4xl font-bold text-greenss">
+                                      $4,795/m
+                                    </h2>
+                                    <p
+                                      class="text-white text-opacity-80 text-xs xl:text-base"
+                                    >
+                                      Pause or cancel anytime
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="pt-6">
+                                <div class="flex flex-col gap-8">
+                                  <div class="">
+                                    <div>
+                                      <ul class="flex flex-col gap-4 xl:gap-3">
+                                        <li
+                                          class="flex gap-4 text-lg items-center"
+                                        >
+                                          <span
+                                            ><img
+                                              class="w-4"
+                                              src="./assets/logos/star.svg"
+                                              alt="" /></span
+                                          ><span class="text-greenss"
+                                            >2x active task
+                                          </span>
+                                          at a time
+                                        </li>
+                                        <li
+                                          class="flex gap-4 text-lg items-center"
+                                        >
+                                          <span
+                                            ><img
+                                              class="w-4"
+                                              src="./assets/logos/star.svg"
+                                              alt="" /></span
+                                          >Unlimited revisions
+                                        </li>
+                                        <li
+                                          class="flex gap-4 text-lg items-center"
+                                        >
+                                          <span
+                                            ><img
+                                              class="w-4"
+                                              src="./assets/logos/star.svg"
+                                              alt="" /></span
+                                          >Dedicated project manager
+                                        </li>
+                                        <li
+                                          class="flex gap-4 text-lg items-center"
+                                        >
+                                          <span
+                                            ><img
+                                              class="w-4"
+                                              src="./assets/logos/star.svg"
+                                              alt="" /></span
+                                          >Daily comms through Slack
+                                        </li>
+                                        <li
+                                          class="flex gap-4 text-lg items-center"
+                                        >
+                                          <span
+                                            ><img
+                                              class="w-4"
+                                              src="./assets/logos/star.svg"
+                                              alt="" /></span
+                                          >Work with senior
+                                        </li>
+                                        <li
+                                          class="flex gap-4 text-lg items-center"
+                                        >
+                                          <span
+                                            ><img
+                                              class="w-4"
+                                              src="./assets/logos/star.svg"
+                                              alt="" /></span
+                                          >2-3 days turn around time
+                                        </li>
+                                        <li
+                                          class="flex gap-4 text-lg items-center"
+                                        >
+                                          <span
+                                            ><img
+                                              class="w-4"
+                                              src="./assets/logos/star.svg"
+                                              alt="" /></span
+                                          >Top tier design
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+
+                                  <div>
+                                    <div class="flex flex-col gap-4">
+                                      <button
+                                        class="border border-[#b8fd50d7] py-3 rounded-xl"
+                                      >
+                                        Book A Call
+                                      </button>
+                                      <button
+                                        class="bg-greens py-3 rounded-xl text-blacks font-medium"
+                                      >
+                                        Click to buy
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="">
+                        <div
+                          class="bg-[#222222] rounded-2xl border border-[#b8fd5047]"
+                        >
+                          <div class="p-8">
+                            <div>
+                              <div
+                                class="space-y-5 border-b border-[#5654548e] pb-6"
+                              >
+                                <div class="flex items-center gap-3">
+                                  <div>
+                                    <h2
+                                      class="font-semibold text-2xl xl:text-3xl"
+                                    >
+                                      Basic - Weekly
+                                    </h2>
+                                  </div>
+                                </div>
+
+                                <div>
+                                  <p
+                                    class="text-white text-opacity-80 text-xs xl:text-base"
+                                  >
+                                    Perfect if you want to try the subscription
+                                    out or only have a few one-off tasks.
+                                  </p>
+                                </div>
+                              </div>
+
+                              <div class="py-6 border-b border-[#5654548e]">
+                                <div>
+                                  <div>
+                                    <h2 class="text-4xl font-bold text-greenss">
+                                      $890/m
+                                    </h2>
+                                    <p
+                                      class="text-white text-opacity-80 text-xs xl:text-base"
+                                    >
+                                      Pause or cancel anytime
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="pt-6">
+                                <div class="flex flex-col gap-8">
+                                  <div class="">
+                                    <div>
+                                      <ul class="flex flex-col gap-4 xl:gap-3">
+                                        <li
+                                          class="flex gap-4 text-lg items-center"
+                                        >
+                                          <span
+                                            ><img
+                                              class="w-4"
+                                              src="./assets/logos/star.svg"
+                                              alt="" /></span
+                                          >Fixed Scope of work
+                                        </li>
+                                        <li
+                                          class="flex gap-4 text-lg items-center"
+                                        >
+                                          <span
+                                            ><img
+                                              class="w-4"
+                                              src="./assets/logos/star.svg"
+                                              alt="" /></span
+                                          >2 rounds of revisions
+                                        </li>
+                                        <li
+                                          class="flex gap-4 text-lg items-center"
+                                        >
+                                          <span
+                                            ><img
+                                              class="w-4"
+                                              src="./assets/logos/star.svg"
+                                              alt="" /></span
+                                          >Dedicated project manager
+                                        </li>
+                                        <li
+                                          class="flex gap-4 text-lg items-center"
+                                        >
+                                          <span
+                                            ><img
+                                              class="w-4"
+                                              src="./assets/logos/star.svg"
+                                              alt="" /></span
+                                          >Daily comms through Slack
+                                        </li>
+                                        <li
+                                          class="flex gap-4 text-lg items-center"
+                                        >
+                                          <span
+                                            ><img
+                                              class="w-4"
+                                              src="./assets/logos/star.svg"
+                                              alt="" /></span
+                                          >1x designer
+                                        </li>
+                                        <li
+                                          class="flex gap-4 text-lg items-center"
+                                        >
+                                          <span
+                                            ><img
+                                              class="w-4"
+                                              src="./assets/logos/star.svg"
+                                              alt="" /></span
+                                          >2-5 days turn around time
+                                        </li>
+                                        <li
+                                          class="flex gap-4 text-lg items-center"
+                                        >
+                                          <span
+                                            ><img
+                                              class="w-4"
+                                              src="./assets/logos/star.svg"
+                                              alt="" /></span
+                                          >Top tier design
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+
+                                  <div>
+                                    <div class="flex flex-col gap-4">
+                                      <button
+                                        class="border border-[#b8fd50d7] py-3 rounded-xl"
+                                      >
+                                        Book A Call
+                                      </button>
+                                      <button
+                                        class="bg-greens py-3 rounded-xl text-blacks font-medium"
+                                      >
+                                        Click to buy
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="py-24 bg-white pb-60">
+        <div>
+          <div class="flex mx-auto w-11/12 xl:max-w-2xl">
+            <div class="w-full">
+              <div class="w-full">
+                <div class="w-full">
+                  <div class="w-full">
+                    <div class="text-center">
+                      <h2
+                        class="uppercase text-blacks font-semibold text-2xl text-center xl:text-4xl"
+                      >
+                        faq'<span class="lowercase">s</span>
+                      </h2>
+                      <p class="text-black opacity-60 xl:text-lg">
+                        Providing answers to your questions
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mt-8">
+                  <div>
+                    <div class="flex flex-col gap-8">
+                      <div id="faq-sections" class="flex flex-col gap-4"></div>
+
+                      <div>
+                        <form action="" class="flex flex-col gap-4">
+                          <textarea
+                            class="w-full border rounded-xl p-4 text-blacks outline-none"
+                            name=""
+                            rows="5"
+                            id=""
+                            placeholder="Ask us what you want to know.."
+                          ></textarea>
+
+                          <input
+                            type="submit"
+                            value="Send"
+                            class="bg-greens text-blacks px-6 py-2 rounded-xl"
+                          />
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div>
+          <div class="w-11/12 flex mx-auto relative xl:w-[1200px]">
+            <div class="w-full">
+              <div class="w-full">
+                <div>
+                  <div
+                    class="py-8 relative bg-[#1E2008] -top-32 left-0 right-0 rounded-xl xl:py-14"
+                  >
+                    <div
+                      class="flex flex-col items-center text-center px-5 gap-5"
+                    >
+                      <h2
+                        class="font-extrabold text-2xl sm:text-3xl text-center xl:text-5xl w-[500px]"
+                      >
+                        Become part of the <br />
+                        design revolution
+                      </h2>
+
+                      <p class="text-white text-opacity-80 sm:w-[300px]">
+                        Jump on a membership and start requesting designs right
+                        away!
+                      </p>
+
+                      <div>
+                        <button
+                          class="bg-greens px-6 py-2.5 rounded-xl text-blacks font-medium"
+                        >
+                          See Pricing
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <div>
+                    <div>
+                      <div
+                        class="flex flex-col md:flex-row w-full items-start justify-between"
+                      >
+                        <div class="space-y-4">
+                          <h2 class="text-2xl font-bold xl:text-3xl">
+                            Hoque
+                            <span class="text-greenss">Consulting&reg;</span>
+                          </h2>
+                          <p class="text-white text-opacity-80 w-[400px]">
+                            Hoque Consulting - the leading digital agency based
+                            in the US, working with top-tier clients, from
+                            start-ups to enterprises.
+                          </p>
+                        </div>
+
+                        <div class="mt-5">
+                          <div class="space-y-3">
+                            <div>
+                              <div>
+                                <p class="space-x-2">
+                                  <span
+                                    ><i class="fa-solid fa-envelope"></i
+                                  ></span>
+                                  <a href="mailto:info@hoqueconsulting.com"
+                                    >info@hoqueconsulting.com</a
+                                  >
+                                </p>
+                              </div>
+                            </div>
+
+                            <div>
+                              <div>
+                                <p class="space-x-2">
+                                  <span><i class="fa-solid fa-phone"></i></span>
+                                  <a href="tel:123456789">+1 123 456 8909</a>
+                                </p>
+                              </div>
+                            </div>
+
+                            <div>
+                              <div class="flex flex-row gap-3 text-xl">
+                                <a href="#"
+                                  ><i
+                                    class="fa-brands fa-facebook text-[#B9FD50]"
+                                  ></i
+                                ></a>
+                                <a href="#"
+                                  ><i class="fa-brands fa-instagram"></i
+                                ></a>
+                                <a href="#">
+                                  <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                                <a href="#">
+                                  <i class="fa-brands fa-dribbble"></i>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="mt-8 py-6 block text-center border-t border-[#3d3d3d89]"
+                      >
+                        &copy; Hoque Consulting - All Right Reserved
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="animation.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      // Initialize Swiper
+      const swiper = new Swiper(".swiper", {
+        // Enable navigation buttons
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        // Enable pagination
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        // Loop through slides
+        loop: true,
+        // Auto slide
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        // Responsive breakpoints
+        breakpoints: {
+          480: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          1080: {
+            slidesPerView: 3,
+            spaceBetween: 25,
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
